@@ -11,7 +11,7 @@ public class DragAndDrop : MonoBehaviour
     {
         _screenPosition = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         _offset = gameObject.transform.position -
-                Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, _screenPosition.z));
+        Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, _screenPosition.z));
     }
 
     void OnMouseDrag()

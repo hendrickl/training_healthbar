@@ -921,6 +921,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialHealth: 100
+  _followDistance: 5
+  _speed: 5
+  _player: {fileID: 1270086992}
 --- !u!135 &1799652725
 SphereCollider:
   m_ObjectHideFlags: 0

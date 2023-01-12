@@ -13,7 +13,6 @@ public class HealthDisplay : MonoBehaviour
     private void Awake()
     {
         _lastHP = _player.Health;
-        print("_lastHP : " + _lastHP);
     }
 
     private void Start()
