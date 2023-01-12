@@ -5,4 +5,9 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     [SerializeField] private int _damage = 10;
+
+    // private void OnMouseDown()
+    // {
+    //     print("test");
+    // }
 }

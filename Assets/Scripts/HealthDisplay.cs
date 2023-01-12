@@ -12,6 +12,14 @@ public class HealthDisplay : MonoBehaviour
     private void Start()
     {
         _player = GetComponent<Player>();
-        _healthText.text = "Player HP = " + _player.Health.ToString();
+
+        if (_player != null)
+        {
+            _healthText.text = "Player HP = " + _player.Health.ToString();
+        }
+        else
+        {
+            _healthText.text = "Player not found";
+        }
     }
 }
