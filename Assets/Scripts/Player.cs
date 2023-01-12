@@ -12,9 +12,13 @@ public class Player : MonoBehaviour
         get { return _health; }
     }
 
-    private void Start()
+    private void Awake()
     {
         _health = _initialHealth;
+    }
+
+    private void Start()
+    {
         _gameObj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         _gameObj.transform.position = new Vector3(0, 0, 0);
     }
