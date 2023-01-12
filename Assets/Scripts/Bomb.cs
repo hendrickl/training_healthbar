@@ -17,5 +17,12 @@ public class Bomb : MonoBehaviour
 
             Destroy(gameObject);
         }
+        else if (other.gameObject.CompareTag("Ally"))
+        {
+            Ally ally = other.gameObject.GetComponent<Ally>();
+            ally.GetHurt(_damage);
+
+            Destroy(gameObject);
+        }
     }
 }
