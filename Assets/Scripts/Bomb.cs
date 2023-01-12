@@ -5,4 +5,17 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     [SerializeField] private int _damage = 10;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print(other.gameObject + " collides with " + gameObject);
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Player player = other.gameObject.GetComponent<Player>();
+            player.GetHurt(_damage);
+
+            Destroy(gameObject);
+        }
+    }
 }

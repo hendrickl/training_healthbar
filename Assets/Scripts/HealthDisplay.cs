@@ -5,21 +5,35 @@ using TMPro;
 
 public class HealthDisplay : MonoBehaviour
 {
-    Player _player;
+    private float _lastHP;
 
     [SerializeField] private TMP_Text _healthText;
+    [SerializeField] private Player _player;
+
+    private void Awake()
+    {
+        _lastHP = _player.Health;
+        print("_lastHP : " + _lastHP);
+    }
 
     private void Start()
     {
-        _player = GetComponent<Player>();
-
         if (_player != null)
         {
-            _healthText.text = "Player HP = " + _player.Health.ToString();
+            _healthText.text = "Player HP = " + _player.Health;
         }
         else
         {
             _healthText.text = "Player not found";
+        }
+    }
+
+    private void Update()
+    {
+        if (_player.Health != _lastHP)
+        {
+            _healthText.text = "Player HP = " + _player.Health;
+            _lastHP = _player.Health;
         }
     }
 }

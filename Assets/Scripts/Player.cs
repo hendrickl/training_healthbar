@@ -14,5 +14,17 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         _health = _initialHealth;
+        print("_health : " + _health);
+
+    }
+
+    public void GetHurt(int damage)
+    {
+        _health -= damage;
+
+        if (_health <= 0)
+        {
+            _health = 0;
+        }
     }
 }
