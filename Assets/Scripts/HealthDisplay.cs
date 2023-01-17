@@ -8,7 +8,7 @@ public class HealthDisplay : MonoBehaviour
     private float _lastHP;
 
     [SerializeField] private TMP_Text _healthText;
-    [SerializeField] private Player _player;
+    [SerializeField] private Characters _character;
     // Scriptable obj instance
     [SerializeField] private IntVariable _hp;
 
@@ -19,9 +19,9 @@ public class HealthDisplay : MonoBehaviour
 
     private void Start()
     {
-        if (_player != null)
+        if (_character != null)
         {
-            _healthText.text = "Player HP = " + _hp.Value;
+            _healthText.text += _hp.Value.ToString();
         }
         else
         {
@@ -33,9 +33,8 @@ public class HealthDisplay : MonoBehaviour
     {
         if (_hp.Value != _lastHP)
         {
-            _healthText.text = "Player HP = " + _hp.Value;
+            _healthText.text += _hp.Value.ToString();
             _lastHP = _hp.Value;
         }
-        Debug.Log(_hp.Value);
     }
 }

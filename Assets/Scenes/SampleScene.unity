@@ -285,7 +285,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
+  m_text: 'Ally HP
 
 '
   m_isRightToLeft: 0
@@ -690,7 +690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthText: {fileID: 1451567833}
-  _player: {fileID: 1270086993}
+  _character: {fileID: 1270086993}
   _hp: {fileID: 11400000, guid: bd8e0013a44e07a40a788002c648e63f, type: 2}
 --- !u!54 &1270086999
 Rigidbody:
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
+  m_text: 'Player HP
 
 '
   m_isRightToLeft: 0
@@ -1062,10 +1062,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialHealth: 100
+  _health: {fileID: 11400000, guid: 998705de11d03c24fb37aaae5a4f4d81, type: 2}
   _followDistance: 2
   _speed: 20
   _player: {fileID: 1270086992}
-  _health: {fileID: 11400000, guid: 998705de11d03c24fb37aaae5a4f4d81, type: 2}
 --- !u!135 &1799652725
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1169,8 +1169,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1799652723}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b979498568cc544f8ad617d7809565c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7bb36bbdeb8512741991be916f9ad931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthAllyText: {fileID: 654347626}
-  _ally: {fileID: 1799652724}
+  _healthText: {fileID: 654347626}
+  _character: {fileID: 1799652724}
+  _hp: {fileID: 11400000, guid: 998705de11d03c24fb37aaae5a4f4d81, type: 2}
