@@ -598,6 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialHealth: 100
+  _health: {fileID: 11400000, guid: bd8e0013a44e07a40a788002c648e63f, type: 2}
 --- !u!135 &1270086994
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -690,6 +691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthText: {fileID: 1451567833}
   _player: {fileID: 1270086993}
+  _hp: {fileID: 11400000, guid: bd8e0013a44e07a40a788002c648e63f, type: 2}
 --- !u!54 &1270086999
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1063,6 +1065,7 @@ MonoBehaviour:
   _followDistance: 2
   _speed: 20
   _player: {fileID: 1270086992}
+  _health: {fileID: 11400000, guid: 998705de11d03c24fb37aaae5a4f4d81, type: 2}
 --- !u!135 &1799652725
 SphereCollider:
   m_ObjectHideFlags: 0

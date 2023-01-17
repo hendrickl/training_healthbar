@@ -8,16 +8,17 @@ public class Ally : MonoBehaviour
     [SerializeField] private int _followDistance;
     [SerializeField] private float _speed;
     [SerializeField] private GameObject _player;
+    // Sciptable obj
+    [SerializeField] private IntVariable _health;
 
-    private int _health;
     public int Health
     {
-        get { return _health; }
+        get { return _health.Value; }
     }
 
     private void Awake()
     {
-        _health = _initialHealth;
+        _health.Value = _initialHealth;
     }
 
     private void Update()
@@ -27,11 +28,11 @@ public class Ally : MonoBehaviour
 
     public void GetHurt(int damage)
     {
-        _health -= damage;
+        _health.Value -= damage;
 
-        if (_health <= 0)
+        if (_health.Value <= 0)
         {
-            _health = 0;
+            _health.Value = 0;
         }
     }
 
