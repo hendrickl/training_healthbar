@@ -5,6 +5,9 @@ using TMPro;
 
 public class HealthDisplay : MonoBehaviour
 {
+    // Scriptable obj instance
+    public IntVariable PlayerHP;
+
     private float _lastHP;
 
     [SerializeField] private TMP_Text _healthText;
@@ -34,5 +37,6 @@ public class HealthDisplay : MonoBehaviour
             _healthText.text = "Player HP = " + _player.Health;
             _lastHP = _player.Health;
         }
+        Debug.Log(PlayerHP.Value);
     }
 }
