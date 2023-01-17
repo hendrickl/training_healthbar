@@ -4,27 +4,25 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private IntVariable _initialHealth;
+    [SerializeField] private int _initialHealth = 100;
     [SerializeField] private IntVariable _health;
 
-    public IntVariable Health
+    public int Health
     {
-        get { return _health; }
+        get { return _health.Value; }
     }
 
     private void Awake()
     {
-        _health = _initialHealth;
+        _health.Value = _initialHealth;
     }
     public void GetHurt(int damage)
     {
-        /*
-        _health -= damage;
+        _health.Value -= damage;
 
-        if (_health <= 0)
+        if (_health.Value <= 0)
         {
-            _health = 0;
+            _health.Value = 0;
         }
-        */
     }
 }
