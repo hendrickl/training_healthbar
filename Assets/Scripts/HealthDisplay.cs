@@ -5,24 +5,23 @@ using TMPro;
 
 public class HealthDisplay : MonoBehaviour
 {
-    // Scriptable obj instance
-    public IntVariable PlayerHP;
-
     private float _lastHP;
 
     [SerializeField] private TMP_Text _healthText;
     [SerializeField] private Player _player;
+    // Scriptable obj instance
+    [SerializeField] private IntVariable _hp;
 
     private void Awake()
     {
-        _lastHP = _player.Health;
+        _lastHP = _hp.Value;
     }
 
     private void Start()
     {
         if (_player != null)
         {
-            _healthText.text = "Player HP = " + _player.Health;
+            _healthText.text = "Player HP = " + _hp.Value;
         }
         else
         {
@@ -32,11 +31,11 @@ public class HealthDisplay : MonoBehaviour
 
     private void Update()
     {
-        if (_player.Health != _lastHP)
+        if (_hp.Value != _lastHP)
         {
-            _healthText.text = "Player HP = " + _player.Health;
-            _lastHP = _player.Health;
+            _healthText.text = "Player HP = " + _hp.Value;
+            _lastHP = _hp.Value;
         }
-        Debug.Log(PlayerHP.Value);
+        Debug.Log(_hp.Value);
     }
 }

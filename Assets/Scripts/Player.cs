@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private int _initialHealth = 100;
-    private int _health;
-    public int Health
+    [SerializeField] private IntVariable _initialHealth;
+    [SerializeField] private IntVariable _health;
+
+    public IntVariable Health
     {
         get { return _health; }
     }
@@ -15,14 +16,15 @@ public class Player : MonoBehaviour
     {
         _health = _initialHealth;
     }
-
     public void GetHurt(int damage)
     {
+        /*
         _health -= damage;
 
         if (_health <= 0)
         {
             _health = 0;
         }
+        */
     }
 }
